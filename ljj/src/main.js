@@ -5,9 +5,14 @@ import App from './App'
 import router from './router'
 import Vant from 'vant';
 import 'vant/lib/index.css';
+import VueLazyload from 'vue-lazyload';
 
 Vue.use(Vant);
 Vue.config.productionTip = false
+Vue.use(VueLazyload,{
+	error:'/static/images/error.jpg',
+	loading:'/static/images/loading.gif'
+})
 
 /* eslint-disable no-new */
 new Vue({
