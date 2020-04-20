@@ -136,8 +136,11 @@
                     </van-list>
                 </div>                                                               
             </van-tab>
-      </van-tabs>  
-      <van-footer></van-footer>
+      </van-tabs>
+      <div class="footer">
+          <van-footer></van-footer>
+      </div>  
+      
   </div>
 </template>
 
@@ -145,7 +148,7 @@
 import Footer from '../components/footer.vue';
 
 export default {
-  name: 'Home',
+  name: 'home',
   data () {
     return {
         location: '上海浦东新区',
@@ -360,5 +363,11 @@ export default {
     .tagListStyle div{
         background-color: #f7f8fa;
         text-align: center;
+    }
+    .footer{
+        position: fixed;
+        z-index: 300;
+        bottom: 0;
+        width: 100%;
     }
 </style>
