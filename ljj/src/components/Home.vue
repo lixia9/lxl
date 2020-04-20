@@ -1,124 +1,66 @@
 <template>
   <div class="container">
       <van-row>
-          <van-col>
-              <van-icon name="location" color="#2196f3"/>
-              <span>上海市浦东新区</span>
+          <!-- 取消css样式 采用组件自带属性span、offset来控制 -->
+          <van-col span="19">
+              <van-icon name="location" color="#2196f3" size="25"/>
+              <!-- 这里的文字字体适当加粗调大 -->
+              <span class="sizeHighlight">{{location}}</span>
               <van-icon name="arrow-down" />
           </van-col>
-          <van-col class="rightTools">
-              <van-icon name="scan" />
-              <van-icon name="comment-o" />
+          <van-col span="2">
+              <van-icon name="scan" size="25"/>
+          </van-col>
+          <van-col offset="1" span="2">
+              <van-icon name="comment-o" size="25"/>
           </van-col>
       </van-row>
       <van-row>
-          <van-search class="search" placeholder="搜索商家、商品名称" input-align="center" />
+          <!-- 取消css样式 采用组件自带属性shape来控制 -->
+          <van-search placeholder="搜索商家、商品名称" input-align="center" shape="round" />
       </van-row>
-      <van-row>         
-            <van-swipe :autoplay="3000">
+      <van-row> 
+            <!-- 换变量 -->
+            <van-swipe :autoplay="time">
                 <van-swipe-item v-for="(image, index) in images" :key="index">
                     <img class="news" v-lazy="image" />
                 </van-swipe-item>
             </van-swipe>
       </van-row>
-      <van-row type="flex" class="mainList" justify="space-between">
-          <van-col>
-              <van-image width="65" height="65" :src="listImage"/>
-              <span>美食</span>
-          </van-col>
-          <van-col>
-              <van-image width="65" height="65" :src="listImage"/>
-              <span>商超便利</span>
-          </van-col>
-          <van-col>
-              <van-image width="65" height="65" :src="listImage"/>
-              <span>水果</span>
-          </van-col>  
-          <van-col>  
-              <van-image width="65" height="65" :src="listImage"/>
-              <span>跑腿代购</span>    
-          </van-col>  
-          <van-col>  
-              <van-image width="65" height="65" :src="listImage"/>
-              <span>甜品饮品</span>    
-          </van-col>                   
-      </van-row>
-      <van-row type="flex" class="mainList" justify="space-between">
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>下午茶</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>汉堡披萨</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>快餐便当</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>买菜</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>送药上门</span>
-            </van-col>
-      </van-row>
-      <van-row type="flex" class="mainList" justify="space-between">
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>星选好店</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>大牌惠吃</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>打卡领红包</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>炸鸡炸串</span>
-            </van-col>
-            <van-col>
-                <van-image width="65" height="65" :src="listImage"/>
-                <span>全部分类</span>
-            </van-col>
-      </van-row> 
+      <!-- 这里调整为循环 用对象变量控制 -->
+      <div v-for="(row,rowIndex) in listArray" :key="rowIndex">
+          <van-row type="flex" class="mainList" justify="space-between">
+              <div v-for="(obj,colIndex) in row.listObj" :key="colIndex">
+                  <van-col>
+                      <van-image :width="obj.width" :height="obj.height" :src="obj.imageSrc"/>
+                      <span>{{obj.name}}</span>
+                  </van-col>
+              </div>
+          </van-row>
+      </div>
+      <!-- 取消css样式 采用组件属性控制 -->
       <van-row class="joinVip">
-          <van-col>
-              <van-image class="vipImage" :src="'../../static/images/vip.png'"/>
-              <span style="font-weight: bold; margin-left: 20px;">加入超级会员</span>
+          <van-col offset="2" span="16">
+              <span style="font-weight: bold">加入超级会员</span>
               <span>·每月领20元红包</span>
           </van-col>
-          <van-col style="float: right;">
-              <van-row>
-                  <van-col>
-                      <span>限时6元开通</span>
-                  </van-col>
-                  <van-col>
-                      <van-image class="vipImage" :src="'../../static/images/arrow.png'"/>
-                  </van-col>      
-              </van-row>
+          <van-col span="6">
+              <span>限时6元开通</span>
+          </van-col>
+      </van-row>
+      <span class="titleStyle">优惠专区</span>
+      <van-row>
+          <van-col span="11" class="discountArea">
+              <div class="tagStyle1">限时秒杀</div>
+          </van-col>
+          <van-col offset="2" span="11" class="discountArea">
+              <div class="tagStyle2">运费减免</div>
           </van-col>
       </van-row>
       <van-row>
-            <span class="titleStyle">优惠专区</span>
-            <van-row>
-                <van-col class="discountArea">
-                    <div class="tagStyle1">限时秒杀</div>
-                </van-col>
-                <van-col class="discountArea">
-                    <div class="tagStyle2">运费减免</div>
-                </van-col>
-            </van-row>
-      </van-row>
-      <van-row>
-            <van-col class="titleStyle">
-                专属·晚餐
-            </van-col>
+          <van-col>
+              <span class="titleStyle">专属·晚餐</span>
+          </van-col>
             <van-col style="float: right; margin-top: 10px; margin-bottom: 10px;">
                 <van-row>
                     <van-col style="font-size: 13px;">更多好店</van-col>
@@ -127,48 +69,74 @@
             </van-col>
       </van-row>
       <van-row>
-            <van-row>
-                <van-col class="discountArea"></van-col>
-                <van-col class="discountArea"></van-col>
-            </van-row>
+          <van-col span="11" class="discountArea"></van-col>
+          <van-col offset="2" span="11" class="discountArea"></van-col>
       </van-row>
       <van-row>
-            <van-row>
-                <van-col class="discountArea"></van-col>
-                <van-col class="discountArea"></van-col>
-            </van-row>
-      </van-row>
+          <van-col span="11" class="discountArea"></van-col>
+          <van-col offset="2" span="11" class="discountArea"></van-col>
+      </van-row>            
       <van-row>
-            <van-swipe :autoplay="3000">
+            <van-swipe :autoplay="time">
                 <van-swipe-item v-for="(image, index) in images" :key="index">
                     <img class="news" v-lazy="image" />
                 </van-swipe-item>
             </van-swipe> 
-      </van-row>
-      <van-row>
-            <van-tabs color="#39a9ed" v-model="active">
-                <van-tab v-for="title in tabTitles" :key="title" :title="title">                   
-                    <div v-if="title == '推荐'">
-                        <van-row>
-                            <van-col>综合排序<van-icon name="arrow-down" /></van-col>
-                            <van-col>距离</van-col>
-                            <van-col>销量</van-col>
-                            <van-col style="margin-left: 20px;">筛选<van-icon name="filter-o" /></van-col>
-                        </van-row>
-                        <van-row>
-                            <van-list
-                                v-model="isLoading"
-                                :finished="finished"
-                                finished-text="没有更多了"
-                                @load="onLoad"
-                            >
-                                <van-cell v-for="item in list" :key="item" :title="item" />
-                            </van-list>
-                        </van-row>
-                    </div>                                                               
-                </van-tab>
-            </van-tabs>
-      </van-row>    
+      </van-row>     
+      <van-tabs class="tabStyle" color="#39a9ed" title-active-color="#39a9ed" v-model="active" sticky swipeable>
+            <van-tab v-for="title in tabTitles" :key="title" :title="title">                   
+                <div v-if="title == '推荐'">
+                    <van-row style="margin: 10px 0;">
+                        <van-col offset="1" span="6">
+                            综合排序<van-icon name="arrow-down" />
+                        </van-col>
+                        <van-col span="4">距离</van-col>
+                        <van-col span="9">销量</van-col>
+                        <van-col span="4">
+                            筛选<van-icon name="filter-o" class="filterRight"/>
+                        </van-col>
+                    </van-row>
+                    
+                    <van-row class="tagListStyle">
+                        <div v-for="tag in tags" :key="tag">
+                            <van-col offset="1" span="5">
+                                {{tag}}
+                            </van-col>
+                        </div>                       
+                    </van-row>
+                    <van-row>
+                        <van-list
+                            v-model="isLoading"
+                            :finished="finished"
+                            finished-text="没有更多了"
+                            @load="onLoad"
+                        >
+                            <van-cell v-for="item in list" :key="item" :title="item" />
+                        </van-list>
+                    </van-row>
+                </div>
+                <div v-else-if="title == '果蔬商超'">
+                    <van-list
+                            v-model="isLoading"
+                            :finished="finished"
+                            finished-text="没有更多了"
+                            @load="onLoad"
+                        >
+                            <van-cell v-for="item in list" :key="item" :title="item" />
+                        </van-list>
+                </div>
+                <div v-else>
+                    <van-list
+                        v-model="isLoading"
+                        :finished="finished"
+                        finished-text="没有更多了"
+                        @load="onLoad"
+                    >
+                        <van-cell v-for="item in list" :key="item" :title="item" />
+                    </van-list>
+                </div>                                                               
+            </van-tab>
+      </van-tabs>  
       <van-footer></van-footer>
   </div>
 </template>
@@ -180,18 +148,110 @@ export default {
   name: 'Home',
   data () {
     return {
-      tabTitles: ['推荐', '果蔬商超', '到店自取'],
-      tags: ['津贴优惠', '满减优惠', '品质联盟', '配送费优惠'],
-      images: [
-          'https://img.yzcdn.cn/vant/apple-1.jpg',
-          'https://img.yzcdn.cn/vant/apple-2.jpg',
-          'https://img.yzcdn.cn/vant/apple-3.jpg',
-      ],
-      listImage: '../../static/images/list.jpeg',
-      active: 0,
-      isLoading: false,
-      finished: false,
-      list: [],
+        location: '上海浦东新区',
+        time: '1000',
+        listArray: [
+            {
+                listObj:[
+                    {
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '美食'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '商超便利'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '水果'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '跑腿代购'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '甜品饮品'
+                    }
+                ]
+            }, {
+                listObj:[
+                    {
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '下午茶'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '汉堡披萨'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '快餐便当'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '买菜'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '送药上门'
+                    }
+                ]
+            },{
+                listObj:[
+                    {
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '星选好店'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '大牌惠吃'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '打卡领红包'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '炸鸡炸串'
+                    },{
+                        width: '65',
+                        height: '65',
+                        imageSrc: '../../static/images/list.jpeg',
+                        name: '全部分类'
+                    }
+                ]
+            }          
+        ],
+        tabTitles: ['推荐', '果蔬商超', '到店自取'],
+        tags: ['津贴优惠', '满减优惠', '品质联盟', '配送费优惠'],
+        images: [
+            'https://img.yzcdn.cn/vant/apple-1.jpg',
+            'https://img.yzcdn.cn/vant/apple-2.jpg',
+            'https://img.yzcdn.cn/vant/apple-3.jpg',
+        ],
+        listImage: '../../static/images/list.jpeg',
+        active: 0,
+        isLoading: false,
+        finished: false,
+        list: [],
     }
   },
   components: {
@@ -213,53 +273,54 @@ export default {
 }
 </script>
 <style scoped>
-    *{
-        margin-left: 2px;
-        margin-right: 2px;
+    .container{
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+    .sizeHighlight{
+        font-size: 18px;
+        font-weight: bold; 
     }
     .header{
         color: black;
         height: 30px;
     }
-    .rightTools{
-        float: right;
-        width: 15%;
-        height: 30px;
-    }
-    .search{
-        height: 34px;
-        border-radius: 10px;
-        background: #f7f8fa;
-        margin-top:20px;
-        margin-bottom: 10px;
-    }
     .news{
         width: 100%;
-        height: 150px;
+        height: 100px;
         margin: 0;
     }
     .mainList{
         padding-top: 10px;
         font-size: 13px;
     }
-    
     .mainList span{
         width: 65px;
         display: block;
         text-align: center;
     }
+    /* 图标样式 改伪元素before、after */ 
+    .joinVip::before{
+        content: url('../../static/images/vip.png');
+        display: block;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
     .joinVip{
+        position: relative;
         background:#ffd21e59;
+        height: 30px;
         line-height: 30px;
         border-radius: 8px;
         font-size: 13px;
-        margin: 10px;
-        position:relative;
+        margin: 10px 0;
     }
-    .vipImage {
+    .joinVip::after{
+        content: url('../../static/images/arrow.png');
         position: absolute;
-        top: 50%;
-        margin-top:-8px;
+        right: 0;
+        top: 4px;
     }
     .titleStyle{
         font-weight: bold; 
@@ -271,23 +332,33 @@ export default {
     .discountArea{
         border-radius: 8px;
         background-color:  #ededed;
-        width: 48%;
         height: 175px;
-        text-align: center;
         display: flex;
         justify-content: center;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     .tagStyle1{
         background-color: #ff6034; 
         width: 120px;
         height:25px; 
         color: white;
+        text-align: center;
     }
     .tagStyle2{
         background-color: #1989fa; 
         width: 120px;
         height:25px; 
         color: white;
+        text-align: center;
+    }
+    .tabStyle{
+        font-size: 13px;
+    }
+    .tagListStyle{
+        height: 30px;
+    }
+    .tagListStyle div{
+        background-color: #f7f8fa;
+        text-align: center;
     }
 </style>
