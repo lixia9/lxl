@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Life from '@/components/Life'
 import Orders from '@/components/Orders'
 import Mime from '@/components/Mime'
+import Goods from '@/components/Goods'
 
 Vue.use(Router)
 
@@ -31,6 +32,10 @@ export default new Router({
       path: '/mime',
       name: 'mime',
       component: Mime
+    },{
+      path: '/goods',
+      name: 'goods',
+      component: Goods
     }
   ]
 })
