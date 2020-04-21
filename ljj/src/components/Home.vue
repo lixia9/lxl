@@ -27,17 +27,13 @@
                 </van-swipe-item>
             </van-swipe>
       </van-row>
-      <!-- 这里调整为循环 用对象变量控制 -->
-      <div v-for="(row,rowIndex) in listArray" :key="rowIndex">
-          <van-row type="flex" class="mainList" justify="space-between">
-              <div v-for="(obj,colIndex) in row.listObj" :key="colIndex">
-                  <van-col>
-                      <van-image :width="obj.width" :height="obj.height" :src="obj.imageSrc"/>
-                      <span>{{obj.name}}</span>
-                  </van-col>
-              </div>
-          </van-row>
-      </div>
+      <!-- 这里调整为循环 用对象变量控制 -->     
+      <van-row type="flex" class="mainList" justify="space-between" v-for="(row,rowIndex) in listArray" :key="rowIndex">            
+            <van-col v-for="(obj,colIndex) in row.listObj" :key="colIndex">
+                <van-image class="imageStyle" :width="obj.width" :height="obj.height" :src="obj.imageSrc"/>
+                <span>{{obj.name}}</span>
+            </van-col>            
+      </van-row>      
       <!-- 取消css样式 采用组件属性控制 -->
       <van-row class="joinVip">
           <van-col offset="2" span="16">
@@ -186,28 +182,28 @@ export default {
             }, {
                 listObj:[
                     {
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '下午茶'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '汉堡披萨'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '快餐便当'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '买菜'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '送药上门'
                     }
@@ -215,28 +211,28 @@ export default {
             },{
                 listObj:[
                     {
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '星选好店'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '大牌惠吃'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '打卡领红包'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '炸鸡炸串'
                     },{
-                        width: '65',
-                        height: '65',
+                        width: '50',
+                        height: '50',
                         imageSrc: '../../static/images/list.jpeg',
                         name: '全部分类'
                     }
@@ -296,11 +292,11 @@ export default {
     .mainList{
         padding-top: 10px;
         font-size: 13px;
-    }
+        text-align: center;
+    }  
     .mainList span{
         width: 65px;
-        display: block;
-        text-align: center;
+        display: block;   
     }
     /* 图标样式 改伪元素before、after */ 
     .joinVip::before{
