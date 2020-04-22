@@ -13,7 +13,7 @@
                 <div class="content">
                     <div class="title">春季亚麻条纹时尚上衣</div>
                     <div class="productStatus">价格：
-                        <span>¥ 12345678</span>
+                        <span>¥12345678</span>
                     </div>
                     <div class="productPrice">
                         <img src="../../static/images/pic2.jpg">¥
@@ -47,7 +47,7 @@
                     <div class="productMade">🇫🇷 法国</div>
                     <div class="productTitle">春季亚麻条纹时尚性感衬衫</div>
                     <div class="productPrice">
-                        <img src="../../static/images/pic3.jpg">¥
+                        <img src="../../static/images/pic2.jpg">¥
                         <span>66?6.00</span>
                     </div>
                     <div class="productStatus">价格：
@@ -55,7 +55,7 @@
                     </div>
                 </div>                
                 <div class="footer">
-                    <p class="tips">想买人气283838</p>
+                    <div class="tips">想买人气283838</div>
                     <div class="btn">
                         <button class="btn-buy">
                             <span>进店抢红包</span>
@@ -86,12 +86,12 @@
                        <span>¥ 666.00</span>
                     </div>
                     <div class="productPrice">
-                        <img src="../../static/images/pic3.jpg">¥
+                        <img src="../../static/images/pic2.jpg">¥
                         <span>6?6.00</span>
                     </div>
                 </div>
                 <div class="main">
-                    <p>布料质感很柔软，上身很舒服，极简主义，打造出青春气息</p>
+                    布料质感很柔软，上身很舒服，极简主义，打造出青春气息
                 </div>
                 <div class="footer">
                     <button class="btn-buy">进店抢红包</button>
@@ -159,24 +159,21 @@ export default {
 }
 </script>
 <style scoped>
-    /* p{
-        margin: 10px 0;
-    } */
     .firstStyle{
-        width: 100%;
-        height: 550px;
+        width: 408px;
+        height: 737px;
     }
     .firstStyle .header{
         display: flex;
         align-items: center;
-        height: 50px;
-        padding-left: 20px;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
+        height: 67px;
+        padding-left: 24px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
         background-color: #F5F5F5;
     }
     .firstStyle .header span{
-        font-size: 20px;
+        font-size: 30px;
     }
     .firstStyle .header img{
         width: 25px;
@@ -186,16 +183,15 @@ export default {
     .firstStyle .banner{
         position: relative;
         width: 100%;
-        height: 300px;
-        background-color: gray; 
+        height: 408px;
     }
     .firstStyle .banner img {
-        width: 100vw;
-        height: 300px;
+        width: 408px;
+        height: 408px;
     }
     .firstStyle .content{
         width: 100%;
-        margin-left: 20px;
+        margin-left: 24px;
     }
     .firstStyle .banner div{
         position: absolute;
@@ -204,36 +200,30 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 140px;
-        height: 30px;
+        width: 207px;
+        height: 38px;
         color: white;
-        font-size: 18px;
-        background-color: rgba(0,0,0,0.5);        
+        font-size: 27px;
+        background-color: rgba(0,0,0,.5);        
     }
     .firstStyle .title{
-        font-size: 20px;
+        margin-top: 24px;
+        font-size: 30px;
     }
     .firstStyle .productStatus{
-        color: #9D9D9D; 
-        font-size: 18px;
-    }
-    .firstStyle .productStatus span{
-        text-decoration:line-through;
+        font-size: 24px;
     }
     .firstStyle .productPrice{
-        display: flex;
-        align-items: center;
-        color: #EA4C33;
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 22px;
     }
     .firstStyle .productPrice img{
+        width: 85px;
+        height: 30px;
         margin-right: 10px;
     }
     .firstStyle .productPrice span{
         margin-left: 5px;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 36px;
     }
     .firstStyle .footer{
         display: flex;
@@ -243,40 +233,29 @@ export default {
         list-style: none;      
     }
     .firstStyle .footer button{
-        height: 50px;
-        width: 120px;
-        overflow: hidden;
-        text-align: center;
-        font-size: 18px;
-        border-radius: 20px;
+        height: 80px;
+        width: 180px;
+        font-size: 30px;
+        border-radius: 50px;
     }
     .firstStyle .btn-buy{
-        margin-right: 5px;
-        color: #EA4C33;
-        border-color: #EA4C33;
-        background-color: white;
-    }
-    .firstStyle .btn-basket{
-        color: white; 
-        border-color: #EA4C33;
-        background-color: #EA4C33;
+        margin-right: 10px;
     }
 
 /* 第二张图布局 */
     .secondStyle{
-        width: 100%;
-        height: 65vw;
+        width: 605px;
+        height: 360px;
     }
     .secondStyle .left{
         position: relative;
         float: left;
-        width: 50%;
-        height: 100%;
-        background-color: gray;
+        width: 360px;
+        height: 360px;
     }
     .secondStyle .banner{
-        width: 50vw;
-        height: 65vw;
+        width: 360px;
+        height: 360px;
     }
     .secondStyle .shop{
         position: absolute;
@@ -287,12 +266,12 @@ export default {
         align-items: center;
         width: 80px;
         height: 30px;
-        margin-right: 10px;
-        margin-top: 10px;
+        margin-right: 12px;
+        margin-top: 12px;
         border-radius: 20px;
         color: white;
         font-size: 14px;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,.6);
     }
     .secondStyle .shop img{
         width: 25px;
@@ -301,15 +280,14 @@ export default {
     .secondStyle .right{
         position: relative;
         float: right;
-        width: 50%;
-        height: 100%;
+        width: 245px;
+        height: 360px;
     }
     .secondStyle .header{
-        /* height: 25%; */
-        padding-bottom: 8px;
-        margin-left: 5px;
+        padding-bottom: 10px;
+        margin-left: 12px;
         text-align: center;
-        border-bottom:1px dashed #111;
+        border-bottom:1px dashed #F0F0F0;
     }
     .secondStyle .header div{
         height: 50%;
@@ -318,8 +296,9 @@ export default {
         display: flex; 
         align-items: center; 
         justify-content: center;
-        font-size:20px; 
-        font-weight:bold; 
+        margin-top: 15px;
+        font-size: 24px;
+        font-weight: bold; 
     }
     .secondStyle .summary{
         display: flex;
@@ -329,11 +308,11 @@ export default {
         font-size: 14px;
     }
     .secondStyle .productPrice{
-        display: flex;
+        /* display: flex;
         align-items: center;
-        color: #EA4C33;
-        font-size: 18px;
-        font-weight: bold;
+        color: #EA4C33; */
+        font-size: 15px;
+        /* font-weight: bold; */
     }
     .secondStyle .productPrice img{
         width: 60px;
@@ -342,53 +321,43 @@ export default {
     }
     .secondStyle .productPrice span{
         margin-left: 5px;
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        /* font-family: Arial, Helvetica, sans-serif; */
     }
     .secondStyle .main{
         position: absolute;
-        /* height: 50%; */
         margin-top: 10px;
-        margin-left: 5px;
+        margin-left: 12px;
     }
     .productMade{
+        margin-top: 8px;
         font-weight: bold;
     }
     .secondStyle .productTitle{
         overflow: hidden; 
-        font-size: 14px;
+        font-size: 15px;
     }
-    .secondStyle .productStatus{
-        color: #9D9D9D; 
-        font-size: 14px;
-    }
-    .secondStyle .productStatus span{
-        text-decoration: line-through; 
-        font-family: Arial, Helvetica, sans-serif;
+    .secondStyle .productStatus{ 
+        font-size: 15px;
     }
     .secondStyle .footer{
         position: absolute;
         bottom: 10px;
-        margin-left: 5px;
-        font-size: 14px;
+        margin-left: 12px;
+        font-size: 15px;
     }
     .secondStyle .tips{
         color: #9D9D9D;
     }
     .secondStyle .btn{
-        margin-top: 5px;
+        margin-top: 12px;
         display: flex;
     }
     .secondStyle .btn button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 8vw;
-        width: 24vw;
+        width: 109px;
+        height: 41px;
         font-size: 14px;
-        overflow: hidden;
-        text-align: center;
-        border-color: #EA4C33;
+        border: 2px solid #EA4C33;
     }
     .secondStyle .btn img{
         display: flex;
@@ -396,32 +365,23 @@ export default {
         width: 12px;
         height: 12px;
     }
-    .secondStyle .btn-buy{
-        margin-right: 5px;
-        color: #EA4C33;        
-        background-color: white;
-    }
-    .secondStyle .btn-basket{
-        color: white; 
-        background-color: #EA4C33;
-    }
     
     /* 第三张图布局*/
     .thirdStyle{
-        width: 100%;
-        height: 45vw;
+        width: 678px;
+        height: 308px;
         margin-top: 20px;
     }
     .thirdStyle .left{
         position: relative;
         float: left;
-        width: 45%;
-        height: 45vw;       
+        width: 308px;
+        height: 308px;
         background-color: gray;
     }
     .thirdStyle .banner{
-        width: 45vw;
-        height: 45vw;
+        width: 308px;
+        height: 308px;
     }
     .thirdStyle .shop{
         position: absolute;
@@ -430,66 +390,47 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 75px;
-        height: 25px;
+        width: 103px;
+        height: 43px;
         margin-right: 10px;
         margin-top: 10px;
         border-radius: 20px;
         color: white;
-        font-size: 14px;   
+        font-size: 20px;
         background-color: rgba(0,0,0,0.7);
         
         
     }
-    .thirdStyle .shop img{
-        width: 20px;
-        height: 20px;
-    }  
-    .thirdStyle .left button{
-        float: right;
-        height: 25px;
-        width: 70px;
-        margin-right: 10px;
-        margin-top: 10px;
-        border-radius: 10px;      
-    }
     .thirdStyle .right{
         position: relative;
         float: right;
-        width: 53%;
-        height: 45vw;     
+        width: 370px;
+        height: 308px;
     }
     .thirdStyle .header{
-        width: 100%;
-        height: 35%;
+        margin-left: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed #F0F0F0;
     }
     .thirdStyle .header div{
         height: 33%;
     }
     .thirdStyle .productTitle{
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        font-size: 16px;
+        margin-top: 24px;
+        font-size: 26px;
     }
     .thirdStyle .productStatus{
-        display: flex; 
-        align-items: center;
-        color: #9D9D9D; 
-        font-size: 14px; 
-    }
-    .thirdStyle .productStatus span{
-        text-decoration: line-through; 
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 21px;
     }
     .thirdStyle .productPrice{
-        display: flex;
+        /* display: flex;
         align-items: center;
-        color: #EA4C33;
-        font-weight: bold;
+        color: #EA4C33; */
+        font-size: 21px;
+        /* font-weight: bold; */
     }
     .thirdStyle .productPrice img{
-        width: 50px;
+        widows: 70px;
         height: 25px;
         margin-right: 5px;
         margin-top: 5px;
@@ -497,55 +438,34 @@ export default {
     }
     .thirdStyle .productPrice span{ 
         margin-left: 5px;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        /* font-family: Arial, Helvetica, sans-serif; */
     }
     .thirdStyle .main{
-        width: 100%;
-        height: 50%;
-        margin-top: 5px;
-        border-top: 1px dashed #111;
-    }
-    .thirdStyle .main p{    
-        height: 45px; 
-        margin-top: 5px;
-        overflow: hidden; 
-        font-size: 14px; 
+        margin-top: 10px;
+        margin-left: 20px;
         color: #9D9D9D; 
+        font-size: 22px;
     }
     .thirdStyle .footer{
         position: absolute;
         bottom: 10px;
         display: flex;
-        height: 15%;
-        margin-top: 5px; 
+        margin-left: 20px;
     }
     .thirdStyle .footer button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 8vw;
-        width: 25vw;
-        overflow: hidden;
-        font-size: 14px;
-        border-color: #EA4C33;
-        border-radius: 20px;
-        text-align: center;   
+        width: 160px;
+        height: 60px;
+        font-size: 22px;
+        border-radius: 30px;
     }
     .thirdStyle .btn-buy{
-        margin-right: 5px;
-        color: #EA4C33;
-        background-color: white;
+        margin-right: 10px;
     }
-    .thirdStyle .btn-basket{
-        color: white; 
-        background-color: #EA4C33;
-    }
-
     /* 第四张图的布局 */
     .forthStyle{
-        width: 100%;
-        height: 150vw;
+        width: 330px;
+        height: 600px;
         margin-top: 20px;
         background-color: #EA4433;
         border-radius: 10px;
@@ -553,44 +473,34 @@ export default {
     .forthStyle .header{
         display: flex;
         align-items: center;
-        padding: 10px 0;
-        margin-left: 10px;
-        margin-right: 10px;
+        padding-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
         color: white;
-        font-size: 20px;
+        font-size: 34px;
         font-weight: bold;
     }
     .forthStyle .header img{
-        width: 24px;
-        height: 24px;
+        width: 42px;
+        height: 42px;
     }
     .forthStyle .main{
-        height: 10%;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 8px 20px 28px 20px;
         color: white;
+        font-size: 22px;
     }
     .forthStyle .footer{
-        height: 80%;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .forthStyle .footer ul{
-        clear: both;
-        overflow: hidden;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .forthStyle .footer ul li {
-        float: left;
-        width: 48%;
-        height: 50vw;
+        width: 140px;
+        height: 182px;
         margin-bottom: 10px; 
     }
-    .forthStyle .footer ul li:nth-child(even) {
-        margin-left: 2%;
-    }
     .productBanner{
-        width: 100%;
-        height: 80%;
+        width: 140px;
+        height: 140px;
     }
     .productBanner img{
         height: 100%;
@@ -602,8 +512,8 @@ export default {
         bottom: 0;
         display: flex;
         align-items: center;
-        width: 100%;
-        height: 20%;
+        height: 38px;
+        font-size: 20px;
         background-color: #F8F8F8;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
