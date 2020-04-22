@@ -1,116 +1,144 @@
 <template>
     <div class="container">
         <div class="firstStyle">
-            <div class="head">
+            <div class="header">
                 <span>JL女装官方旗舰店</span>
-                <img src="../../static/images/arrow.png">
+                <img src="../../static/images/arrow (2).png">
             </div>
-            <div class="imageArea">
-                <div class="transPosition">想买人气28888</div>
-            </div>
-            <div class="mainBody">
-                <div class="titleStyle">春季亚麻条纹时尚上衣</div>
-                <div>价格：</div>
-                <ul class="priceStyle">
-                    <li class="imageBg">
-                        双十二
-                    </li>
-                    <li>¥</li>
-                    <li>6?6.00</li>
-                </ul>
-            </div>
+            <div class="main">
+                <div class="banner">
+                    <img src="../../static/images/pic1.jpg">
+                    <div class="shop">想买人气28888</div>
+                </div>
+                <div class="content">
+                    <div class="title">春季亚麻条纹时尚上衣</div>
+                    <div class="productStatus">价格：
+                        <span>¥ 12345678</span>
+                    </div>
+                    <div class="productPrice">
+                        <img src="../../static/images/pic2.jpg">¥
+                        <span>6?6.00</span>
+                    </div>
+                </div>
+            </div>            
             <div class="footer">
-                <button>进店抢红包</button>
-                <button>加购物车</button> 
-            </div>
+                <button class="btn-buy">进店抢红包</button>
+                <button class="btn-basket">加购物车</button> 
+            </div>           
         </div>
+
         <div class="secondStyle">
             <div class="left">
-                <button>直播中</button>
+                <img class="banner" src="../../static/images/pic1.jpg">
+                <div class="shop">
+                    <img src="../../static/images/point.png">
+                    直播中
+                </div>
             </div>
             <div class="right">
-                <div class="secHead">
-                    <div style="font-size:20px; font-weight:bold;">JNBY</div>
-                    <div>
+                <div class="header">
+                    <div class="title">JNBY</div>
+                    <div class="summary">
                         JL新潮国际旗舰店
                         <img src="../../static/images/arrow.png">
                     </div>
                 </div>
-                <div class="secBody">
-                    <div class="secTitle">🇫🇷法国</div>
-                    <div style=" overflow: hidden; height: 27px;">春季亚麻条纹时尚衬衫</div>
-                    <ul class="priceStyle">
-                        <li class="imageBg">
-                            双十二
-                        </li>
-                        <li>¥</li>
-                        <li>6?6.00</li>
-                    </ul>
-                    <div style="color: gray;">价格：</div>
-                    <div class="secWantBuy">想买人气28888</div>
+                <div class="main">
+                    <div class="productMade">🇫🇷 法国</div>
+                    <div class="productTitle">春季亚麻条纹时尚性感衬衫</div>
+                    <div class="productPrice">
+                        <img src="../../static/images/pic3.jpg">¥
+                        <span>66?6.00</span>
+                    </div>
+                    <div class="productStatus">价格：
+                        <span>¥ 6666.00</span>
+                    </div>
                 </div>                
-                <div class="secFooter">
-                    <button>进店抢红包</button>
-                    <button>加购物车</button> 
+                <div class="footer">
+                    <p class="tips">想买人气283838</p>
+                    <div class="btn">
+                        <button class="btn-buy">
+                            <span>进店抢红包</span>
+                            <img src="../../static/images/arrow (3).png">
+                        </button>
+                        <button class="btn-basket">
+                            <span>加购物车</span>
+                            <img src="../../static/images/arrow (4).png">
+                        </button>
+                    </div>          
                 </div>
             </div>
         </div>
+
         <div class="thirdStyle">
-            <div class="thirdLeft">
-                <button>直播中</button>
-            </div>
-            <div class="thirdRight">
-                <div class="thirdHead">
-                   <div class="titleStyle">春季亚麻条纹时尚衬衫</div>
-                   <div style="color: gray;">价格：</div>
-                    <ul class="priceStyle">
-                        <li class="imageBg">
-                            双十二
-                        </li>
-                        <li>¥</li>
-                        <li>6?6.00</li>
-                    </ul> 
+            <div class="left">
+                <img class="banner" src="../../static/images/pic1.jpg">
+                <div class="shop">
+                    <img src="../../static/images/point.png">
+                    直播中
                 </div>
-                <div class="thirdBody">
-                    <div>布料质感很柔软，上身很舒服，极简主义，打造出青春信息</div>
-                    <div class="thirdButtonStyle">
-                        <button>进店抢红包</button>
-                        <button>加购物车</button> 
+            </div>
+            <div class="right">
+                <div class="header">
+                   <div class="productTitle">春季亚麻条纹时尚性感上衣</div>
+                   <div class="productStatus">
+                       价格：
+                       <span>¥ 666.00</span>
                     </div>
+                    <div class="productPrice">
+                        <img src="../../static/images/pic3.jpg">¥
+                        <span>6?6.00</span>
+                    </div>
+                </div>
+                <div class="main">
+                    <p>布料质感很柔软，上身很舒服，极简主义，打造出青春气息</p>
+                </div>
+                <div class="footer">
+                    <button class="btn-buy">进店抢红包</button>
+                    <button class="btn-basket">加购物车</button> 
                 </div>               
             </div>
         </div>
+
         <div class="forthStyle">
-            <div class="forthHead">
+            <div class="header">
                 更多好宝贝
-                <img src="../../static/images/arrow.png">
+                <img src="../../static/images/arrow-right.png">
             </div>
-            <div class="forthBody">
+            <div class="main">
                 惊喜马上等你来揭晓
             </div>
-            <div class="forthFooter">
+            <div class="footer">
                 <ul>
                     <li>
-                        <div class="imgStyle"></div>
-                        <div class="forthTitle">
+                        <div class="productBanner">
+                            <img src="../../static/images/good1.jpg">
+                        </div>
+                        <div class="productTitle">
                             <span>口味极佳</span>
                         </div>
                     </li>
                     <li>
-                        <div class="imgStyle"></div>
-                        <div class="forthTitle">
+                        <div class="productBanner">
+                            <img src="../../static/images/good2.jpg">
+                        </div>
+                        <div class="productTitle">
                             <span>肉多汁少</span>
                         </div>
                     </li>
                     <li>
-                        <div class="imgStyle"></div>
-                        <div class="forthTitle">
+                        <div class="productBanner">
+                            <img src="../../static/images/good3.jpg">
+                        </div>
+                        <div class="productTitle">
                             <span>美味到想哭</span>
                         </div>
                     </li>
                     <li>
-                        <div class="imgStyle"></div>
-                        <div class="forthTitle">
+                        <div class="productBanner">
+                            <img src="../../static/images/good4.jpg">
+                        </div>
+                        <div class="productTitle">
                             <span>富含营养</span>
                         </div>
                     </li>
@@ -131,248 +159,456 @@ export default {
 }
 </script>
 <style scoped>
+    /* p{
+        margin: 10px 0;
+    } */
     .firstStyle{
         width: 100%;
-        height: 480px;
+        height: 550px;
     }
-    .head{
-        margin-left: 10px;
+    .firstStyle .header{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding-left: 20px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        background-color: #F5F5F5;
     }
-    .head span{
-        font-size: 18px;
-        font-weight: bold;
+    .firstStyle .header span{
+        font-size: 20px;
     }
-    .mainBody{
-        margin-left: 10px;
-        margin-top: 10px;
+    .firstStyle .header img{
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
     }
-    .imageArea{
-        height: 300px;
-        width: 100%;
-        background-color: gray;
+    .firstStyle .banner{
         position: relative;
-        margin-top: 10px;
+        width: 100%;
+        height: 300px;
+        background-color: gray; 
     }
-    .transPosition{
-        width: 150px;
-        height:30px;
+    .firstStyle .banner img {
+        width: 100vw;
+        height: 300px;
+    }
+    .firstStyle .content{
+        width: 100%;
+        margin-left: 20px;
+    }
+    .firstStyle .banner div{
         position: absolute;
         bottom: 0;
         right: 0;
-        background-color: black;
-        color: wheat;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .titleStyle{
-        margin-top: 10px;
+        width: 140px;
+        height: 30px;
+        color: white;
         font-size: 18px;
-        font-weight: bold;
-        height: 30%;
+        background-color: rgba(0,0,0,0.5);        
     }
-    .priceStyle{
-        list-style: none;
-        color: orangered;
+    .firstStyle .title{
+        font-size: 20px;
     }
-    
-    .priceStyle li{
-        display: inline;
-    }
-    .priceStyle li:last-child{
+    .firstStyle .productStatus{
+        color: #9D9D9D; 
         font-size: 18px;
-        font-weight: bold;
     }
-    .imageBg{
-        background-color: orange;
+    .firstStyle .productStatus span{
+        text-decoration:line-through;
     }
-    .footer{
-        margin-top: 10px;
-        list-style: none;
+    .firstStyle .productPrice{
         display: flex;
         align-items: center;
+        color: #EA4C33;
+        font-size: 18px;
+        font-weight: bold;
     }
-    .footer button{
-        height: 35px;
-        width: 100px;
-        border-color: orangered;
+    .firstStyle .productPrice img{
+        margin-right: 10px;
+    }
+    .firstStyle .productPrice span{
         margin-left: 5px;
-        border-radius: 20px;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .firstStyle .footer{
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 20px;
+        list-style: none;      
+    }
+    .firstStyle .footer button{
+        height: 50px;
+        width: 120px;
         overflow: hidden;
         text-align: center;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+    .firstStyle .btn-buy{
+        margin-right: 5px;
+        color: #EA4C33;
+        border-color: #EA4C33;
+        background-color: white;
+    }
+    .firstStyle .btn-basket{
+        color: white; 
+        border-color: #EA4C33;
+        background-color: #EA4C33;
     }
 
 /* 第二张图布局 */
     .secondStyle{
-        margin-top: 20px;
         width: 100%;
-        height: 250px;
+        height: 65vw;
     }
-    .left{
-        background-color: gray;
-        width: 52%;
-        height: 100%;
+    .secondStyle .left{
+        position: relative;
         float: left;
-    }
-    .left button{
-        height: 25px;
-        width: 70px;
-        border-radius: 10px;
-        float: right;
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-    .right{
-        width: 48%;
+        width: 50%;
         height: 100%;
-        float: right;
+        background-color: gray;
     }
-    .secHead{
+    .secondStyle .banner{
+        width: 50vw;
+        height: 65vw;
+    }
+    .secondStyle .shop{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 30px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 20px;
+        color: white;
+        font-size: 14px;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .secondStyle .shop img{
+        width: 25px;
+        height: 25px;
+    }
+    .secondStyle .right{
+        position: relative;
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+    .secondStyle .header{
+        /* height: 25%; */
+        padding-bottom: 8px;
+        margin-left: 5px;
         text-align: center;
-        height: 25%;
         border-bottom:1px dashed #111;
     }
-    .secHead div{
+    .secondStyle .header div{
         height: 50%;
     }
-    .secBody{
-        margin-top: 5px;
-        margin-left: 5px;
-        height: 50%;
+    .secondStyle .title{
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        font-size:20px; 
+        font-weight:bold; 
     }
-    .secTitle{
-        font-weight: bold;
+    .secondStyle .summary{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #9D9D9D;
+        font-size: 14px;
     }
-    .secWantBuy{
-        color: gray;
-    }
-    .secFooter{
-        font-size: 13px;
-        list-style: none;
+    .secondStyle .productPrice{
         display: flex;
         align-items: center;
-        height: 15%;
-        bottom: 0;
+        color: #EA4C33;
+        font-size: 18px;
+        font-weight: bold;
     }
-    .secFooter button{
+    .secondStyle .productPrice img{
+        width: 60px;
         height: 25px;
-        width: 85px;
-        border-color: orangered;
+        margin-right: 5px;
+    }
+    .secondStyle .productPrice span{
         margin-left: 5px;
-        font-size: 13px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .secondStyle .main{
+        position: absolute;
+        /* height: 50%; */
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    .productMade{
+        font-weight: bold;
+    }
+    .secondStyle .productTitle{
+        overflow: hidden; 
+        font-size: 14px;
+    }
+    .secondStyle .productStatus{
+        color: #9D9D9D; 
+        font-size: 14px;
+    }
+    .secondStyle .productStatus span{
+        text-decoration: line-through; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .secondStyle .footer{
+        position: absolute;
+        bottom: 10px;
+        margin-left: 5px;
+        font-size: 14px;
+    }
+    .secondStyle .tips{
+        color: #9D9D9D;
+    }
+    .secondStyle .btn{
+        margin-top: 5px;
+        display: flex;
+    }
+    .secondStyle .btn button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8vw;
+        width: 24vw;
+        font-size: 14px;
         overflow: hidden;
         text-align: center;
+        border-color: #EA4C33;
+    }
+    .secondStyle .btn img{
+        display: flex;
+        align-items: center;
+        width: 12px;
+        height: 12px;
+    }
+    .secondStyle .btn-buy{
+        margin-right: 5px;
+        color: #EA4C33;        
+        background-color: white;
+    }
+    .secondStyle .btn-basket{
+        color: white; 
+        background-color: #EA4C33;
     }
     
     /* 第三张图布局*/
     .thirdStyle{
-        margin-top: 20px;
         width: 100%;
-        height: 50vw;
+        height: 45vw;
+        margin-top: 20px;
     }
-    .thirdLeft{
-        background-color: gray;
-        width: 40%;
-        height: 50vw;
+    .thirdStyle .left{
+        position: relative;
         float: left;
-    }  
-    .thirdLeft button{
+        width: 45%;
+        height: 45vw;       
+        background-color: gray;
+    }
+    .thirdStyle .banner{
+        width: 45vw;
+        height: 45vw;
+    }
+    .thirdStyle .shop{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
         height: 25px;
-        width: 70px;
-        border-radius: 10px;
-        float: right;
         margin-right: 10px;
         margin-top: 10px;
+        border-radius: 20px;
+        color: white;
+        font-size: 14px;   
+        background-color: rgba(0,0,0,0.7);
+        
+        
     }
-    .thirdRight{
-        width: 58%;
-        height: 50vw;
+    .thirdStyle .shop img{
+        width: 20px;
+        height: 20px;
+    }  
+    .thirdStyle .left button{
         float: right;
+        height: 25px;
+        width: 70px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 10px;      
     }
-    .thirdHead{
+    .thirdStyle .right{
+        position: relative;
+        float: right;
+        width: 53%;
+        height: 45vw;     
+    }
+    .thirdStyle .header{
         width: 100%;
-        height: 40%;
-        border-bottom:1px dashed #111;
+        height: 35%;
     }
-    .thirdHead div{
-        height: 30%;
+    .thirdStyle .header div{
+        height: 33%;
     }
-    .thirdBody{
-        width: 100%;
-        height: 55%;
-    }
-    .thirdBody div{
-        height: 50%;
-        overflow: hidden;
-    }
-    .thirdButtonStyle{
-        list-style: none;
+    .thirdStyle .productTitle{
         display: flex;
         align-items: center;
+        margin-top: 10px;
+        font-size: 16px;
     }
-    .thirdButtonStyle button{
-        height: 35px;
-        width: 100px;
-        border-color: orangered;
+    .thirdStyle .productStatus{
+        display: flex; 
+        align-items: center;
+        color: #9D9D9D; 
+        font-size: 14px; 
+    }
+    .thirdStyle .productStatus span{
+        text-decoration: line-through; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .thirdStyle .productPrice{
+        display: flex;
+        align-items: center;
+        color: #EA4C33;
+        font-weight: bold;
+    }
+    .thirdStyle .productPrice img{
+        width: 50px;
+        height: 25px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .thirdStyle .productPrice span{ 
         margin-left: 5px;
-        border-radius: 20px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .thirdStyle .main{
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+        border-top: 1px dashed #111;
+    }
+    .thirdStyle .main p{    
+        height: 45px; 
+        margin-top: 5px;
+        overflow: hidden; 
+        font-size: 14px; 
+        color: #9D9D9D; 
+    }
+    .thirdStyle .footer{
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        height: 15%;
+        margin-top: 5px; 
+    }
+    .thirdStyle .footer button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8vw;
+        width: 25vw;
         overflow: hidden;
-        text-align: center;
+        font-size: 14px;
+        border-color: #EA4C33;
+        border-radius: 20px;
+        text-align: center;   
+    }
+    .thirdStyle .btn-buy{
+        margin-right: 5px;
+        color: #EA4C33;
+        background-color: white;
+    }
+    .thirdStyle .btn-basket{
+        color: white; 
+        background-color: #EA4C33;
     }
 
     /* 第四张图的布局 */
     .forthStyle{
-        margin-top: 20px;
         width: 100%;
         height: 150vw;
-        background-color: #FF5722;
+        margin-top: 20px;
+        background-color: #EA4433;
+        border-radius: 10px;
     }
-    .forthHead{
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
+    .forthStyle .header{
+        display: flex;
+        align-items: center;
         padding: 10px 0;
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .forthBody{
         color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .forthStyle .header img{
+        width: 24px;
+        height: 24px;
+    }
+    .forthStyle .main{
         height: 10%;
         margin-left: 10px;
         margin-right: 10px;
+        color: white;
     }
-    .forthFooter{
+    .forthStyle .footer{
         height: 80%;
         margin-left: 10px;
         margin-right: 10px;
     }
-    .forthFooter ul{
+    .forthStyle .footer ul{
         clear: both;
         overflow: hidden;
     }
-    .forthFooter ul li {
+    .forthStyle .footer ul li {
+        float: left;
         width: 48%;
         height: 50vw;
         margin-bottom: 10px; 
-        float: left;
     }
-    .forthFooter ul li:nth-child(even) {
-        margin-left: 4%;
+    .forthStyle .footer ul li:nth-child(even) {
+        margin-left: 2%;
     }
-    .imgStyle{
+    .productBanner{
         width: 100%;
         height: 80%;
-        background-color: white;
     }
-    .forthTitle{
+    .productBanner img{
+        height: 100%;
         width: 100%;
-        height: 20%;
-        background-color: lightgray;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .forthStyle .productTitle{
         bottom: 0;
         display: flex;
         align-items: center;
+        width: 100%;
+        height: 20%;
+        background-color: #F8F8F8;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
-    .forthTitle span{
+    .forthStyle .productTitle span{
         margin-left: 10px;
     }
 </style>
