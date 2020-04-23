@@ -4,9 +4,11 @@
     text-align: left;
     font-family:Arial, Verdana, Tahoma, "宋体", Helvetica, sans-serif;
     line-height: 150%;
+    font-size: 4vw;
 } 
 img { 
-    border: 0 
+    border: 0;
+    max-width: 100%;
 } 
 ul { 
     clear:both;
@@ -44,7 +46,6 @@ button{
     justify-content: center;
     overflow: hidden;
     text-align: center;
-    font-size: 30px;
     border-color: #EA4C33;
 }
 .btn-buy{
