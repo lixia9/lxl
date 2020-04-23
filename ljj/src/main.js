@@ -6,6 +6,7 @@ import router from './router'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import VueLazyload from 'vue-lazyload';
+import './assets/public.css'
 
 Vue.use(Vant);
 Vue.config.productionTip = false
